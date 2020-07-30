@@ -7,10 +7,17 @@ const userSchema = Schema({
   userName:  { type: String, required: true, unique: true, trim: true, index: true },
   password: { type: String, required: true, trim: true , minlength: 3 },
   email: { type: String, required: true, trim: true, unique: true, index: true },
-  displayname:  { type: String, required: true, unique: true, trim: true, index: true },
-  arrFriendId: { type: Array}
+  displayname:  { type: String, required: true, trim: true, index: true },
+  planId:  { type: String, trim: true, index: true },
+  weightGoal:  { type: String, trim: true, index: true },
+  currentWeight:  { type: String, trim: true, index: true },
+  age:  { type: String, trim: true, index: true },
+  gender:  { type: String, trim: true, index: true },
+  profileImg:  { type: String, trim: true, index: true },
+  activityId:  { type: String, trim: true, index: true },
+  time:  { type: Date, trim: true, index: true },
 },{
-  collection: 'user'
+  collection: 'users'
 });
 
 userSchema.methods.encryptPassword = async (password)  => {

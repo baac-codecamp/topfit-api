@@ -3,16 +3,6 @@ const jwt = require('jsonwebtoken');
 const config = require('../config/index')
 const User = require("../models/userModel")
 
-const users = [
-    {
-        id: "1",
-        name: "peter"
-    },
-    {
-        id: "2",
-        name: "student"
-    }
-];
 
 async function findUserById(id) {
     return users.find(item => {

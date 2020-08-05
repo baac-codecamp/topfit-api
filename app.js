@@ -17,6 +17,7 @@ const connectDB = require('./config/db')
 const userRoute = require('./routes/userRoute');
 const postRoute = require('./routes/postRoute');
 const historyRoute = require('./routes/historyRoute');
+const dietPlanRoute = require('./routes/dietPlanRoute');
 
 const app = express();
 
@@ -59,6 +60,7 @@ app.use(passport.initialize());
 app.use('/api/user', userRoute);
 app.use('/api/post', postRoute);
 app.use('/api/history', historyRoute);
+app.use('/api/dietPlan', dietPlanRoute);
 
 app.use(errorHandler);
 

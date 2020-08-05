@@ -18,6 +18,7 @@ const userRoute = require('./routes/userRoute');
 const postRoute = require('./routes/postRoute');
 const historyRoute = require('./routes/historyRoute');
 const dietPlanRoute = require('./routes/dietPlanRoute');
+const contentRoute = require('./routes/contentRoute');
 
 const app = express();
 
@@ -61,6 +62,7 @@ app.use('/api/user', userRoute);
 app.use('/api/post', postRoute);
 app.use('/api/history', historyRoute);
 app.use('/api/dietPlan', dietPlanRoute);
+app.use('/api/content', contentRoute);
 
 app.use(errorHandler);
 
